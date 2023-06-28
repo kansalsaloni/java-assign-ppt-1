@@ -1,0 +1,177 @@
+Q1.What is the difference between Compiler and Interpreter?
+  
+ANS=>A compiler and an interpreter are two different types of programs used in the field of computer programming.
+COMPILER:
+  1=>Compiler: A compiler takes the entire source code as input and translates it into an executable file or an intermediate representation called object code.
+  2=>The  program is typically faster in terms of execution.
+  3=> If errors or syntax issues are detected during compilation, the compiler will report them as compilation errors. This allows programmers to catch errors early on and fix them before execution.
+  4=>Compiled programs are generally specific to the target platform or architecture for which they were compiled. To run a compiled program on a different platform, you usually need to recompile it for that specific platform.
+
+INTERPRETER:
+    1=>An interpreter, on the other hand, works line by line or statement by statement. It directly executes the source code without creating an intermediate representation or executable file.
+    2=>The  program is typically slower in terms of execution.
+    3=>When an error is encountered during execution, the interpreter halts the program and reports the error message.
+    4=>nterpreted programs are more portable since the interpreter itself can be designed to run on different platforms. As long as the interpreter is available for a particular platform, the same source code can be executed without the need for recompilation.
+  
+##############################################################################################################################################################
+Q2.What is the difference between JDK, JRE, and JVM?
+
+ANS=>
+JDK (Java Development Kit): The JDK is a software development kit that provides tools necessary for developing Java applications. It includes the Java compiler (javac), debugger (jdb), and other development utilities. The JDK also includes the JRE (Java Runtime Environment).
+
+JRE (Java Runtime Environment): The JRE is an environment that provides the necessary runtime libraries, Java Virtual Machine (JVM), and other components to run Java applications. It does not include the development tools like the compiler.
+
+JVM (Java Virtual Machine): The JVM is a virtual machine that executes Java bytecode. It is responsible for interpreting and executing Java bytecode instructions. The JVM is part of both the JDK and the JRE.
+
+##############################################################################################################################################################
+Q3.How many types of memory areas are allocated by JVM?
+  ANS=>The JVM allocates memory into several distinct areas:
+
+=>Heap: The heap is the runtime data area where objects are allocated. It is shared among all threads and is divided into two parts: the young generation and the old generation.
+=>Stack: Each thread in Java has its own stack, which stores method invocations and local variables. It is used for method execution and local variable storage..>
+=>Method Area: The method area stores class structures, method bytecode, and static variables.
+=>PC Registers: Each thread has its own program counter (PC) register, which holds the address of the currently executing JVM instruction.
+=>Native Method Stacks: It contains native method information and is used for executing native methods.
+=>Runtime Constant Pool: The runtime constant pool is a per-class data structure that stores constants, symbol references, and other runtime information.
+  
+##############################################################################################################################################################
+Q4. What is JIT compiler?
+
+ANS=> JIT (Just-In-Time) compiler is a component of the JVM that dynamically compiles bytecode into native machine code during runtime.
+It improves the performance of Java applications by analyzing the frequently executed parts of the bytecode and converting them into highly optimized machine code.
+This optimization happens on-the-fly, allowing the JVM to adapt to the specific execution patterns of the program. 
+The JIT compiler optimizes performance-critical code, providing faster execution compared to pure interpretation.  
+
+
+##############################################################################################################################################################
+Q5. What are the various access specifiers in Java?
+
+ANS=>Java provides four access specifiers to control the visibility and accessibility of classes, methods, variables, and constructors within a program:
+
+=>public: Public members are accessible from any class or package.
+=>private: Private members are accessible only within the same class.
+=>protected: Protected members are accessible within the same class, subclasses, and the same package.
+=>Default (no specifier): Members with no access specifier (also known as package-private) are accessible within the same package.
+##############################################################################################################################################################
+Q6. What is a compiler in Java?
+
+ANS=>In Java, a compiler is a software tool that translates human-readable source code written in the Java programming language into a lower-level language called bytecode.
+The compiler performs various tasks such as syntax and semantic analysis, optimization, and code generation.
+It checks for errors and produces an output file containing the bytecode, which can be executed by the JVM.
+##############################################################################################################################################################
+Q7.Explain the types of variables in Java?
+ANS=>In Java, variables can be classified into three types based on their scope and lifetime:
+
+=>Local Variables
+Local variables are declared inside a method, constructor, or block of code.
+They are only accessible within the block where they are declared.
+Local variables must be explicitly initialized before they can be used.
+They are created when the block of code is entered and destroyed when the block is exited.
+Each invocation of the block creates a new instance of the local variables with new values.
+  
+  EXAMPLE:
+  public void exampleMethod() {
+    int count = 0; // Local variable
+    System.out.println(count);
+}
+
+=>Instance Variables
+Instance variables are declared within a class but outside any method, constructor, or block.
+They belong to an instance (object) of the class, and each instance has its own copy of instance variables.
+Instance variables are initialized with default values if not explicitly initialized. Their values persist as long as the instance exists.
+
+  EXAMPLE:
+  public class MyClass {
+    int instanceVar; // Instance variable
+
+    public void setInstanceVar(int value) {
+        instanceVar = value;
+    }
+}
+
+=>Class Variables (Static Variables)
+  Class variables, also known as static variables, are declared with the static keyword within a class but outside any method, constructor, or block.
+They are associated with the class rather than instances of the class. All instances of the class share the same class variables.
+
+  EXAMPLE:
+  public class MyClass {
+    static int classVar; // Class variable
+
+    public static void setClassVar(int value) {
+        classVar = value;
+    }
+}
+
+##############################################################################################################################################################
+Q8.What are the Datatypes in Java?
+
+ANS=>Java provides a set of predefined data types that are used to define variables and values. The data types in Java can be categorized into two main categories:
+1 Primitive types 
+2 Reference types
+
+=>Primitive Data Types:
+
+1 boolean: Represents a boolean value, either true or false.
+2 byte: Represents a signed 8-bit integer value.
+3 short: Represents a signed 16-bit integer value.
+4 int: Represents a signed 32-bit integer value.
+5 long: Represents a signed 64-bit integer value.
+6 float: Represents a single-precision 32-bit floating-point value.
+7 double: Represents a double-precision 64-bit floating-point value.
+8 char: Represents a single Unicode character.
+
+=>Reference Data Types:
+
+1 Classes: Represents objects of a specific class. These are user-defined types.
+2 Arrays: Represents a collection of elements of the same type. Arrays can hold primitive types or objects.
+3 Interfaces: Represents a contract that defines the methods a class must implement.
+4 Enums: Represents a set of predefined constants.
+
+EXAMPLE:
+  int age = 50; // primitive type
+double price =50.76; // primitive type
+String name = "SALONI"; // reference type (String is a class)
+int[] numbers = {1, 2, 3, 4, 5}; // reference type (array)
+
+##############################################################################################################################################################
+Q9.What are the identifiers in java?
+
+ANS=>In Java, an identifier is a name used to identify a variable, method, class, package, or other program elements.
+It acts as a unique identifier within its scope and helps in referencing and accessing the associated element.
+Here are the rules and conventions for forming valid identifiers in Java:
+1 Valid Characters
+2 Case Sensitivity
+3 Reserved Words
+4 Length
+5 Naming Conventions
+  
+##############################################################################################################################################################
+Q10.Explain the architecture of JVM ?
+
+ANS=>
+1 Class Loader:
+  The Class Loader subsystem is responsible for loading classes into the JVM at runtime.
+  It locates the necessary class files from the file system, network, or other sources and creates the corresponding binary representation of the class in memory.
+2 Runtime Data Areas:
+  VM allocates memory into several distinct runtime data areas to carry out its operations. These areas include:
+ => Method Area
+=>  Heap
+=>  Java Stack
+=>  PC Registers
+=>  Native Method Stack
+
+3 Execution Engine:
+  The Execution Engine interprets and executes the Java bytecode. It reads the bytecode instructions and performs the corresponding actions.
+  Their are two types of it=>
+    =>Interpreter
+    =>Just-In-Time (JIT) Compiler
+
+4 Java Native Interface (JNI):
+  JNI allows Java programs to interact with native code written in other languages, such as C or C++.
+5 Native Method Libraries:
+  Native method libraries contain native code implementations for Java's core libraries and provide additional functionalities beyond the JVM's capabilities.
+  These libraries are written in languages like C or C++ and are linked to the JVM using the JNI.
+  
+##############################################################################################################################################################
+  
+  
